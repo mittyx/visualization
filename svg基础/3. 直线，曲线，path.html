@@ -1,0 +1,46 @@
+<style>
+    .flex-col {
+      flex-direction: column;
+    }
+</style>
+  <div class="flex-col">
+    <div class="flex-col">
+      <div>直线命令</div>
+      <svg width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 10 H 90 V 90 H 10 L 10 10" fill="transparent" stroke="black" stroke-width="3" />
+        <path d="m 110 10 h 90 v 90 h -90 l 0 -90" fill="transparent" stroke="black" stroke-width="3" />
+      </svg>
+    </div>
+    <div class="flex-col">
+      <div>贝塞尔曲线</div>
+      <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent" />
+        <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent" />
+        <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent" />
+        <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent" />
+        <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent" />
+        <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent" />
+        <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent" />
+        <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent" />
+        <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent" />
+      </svg>
+    </div>
+    <div class="flex-col">
+      <div>二次贝塞尔曲线 Q</div>
+      <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent" />
+      </svg>
+    </div>
+    <div class="flex-col">
+      <div>三次贝塞尔曲线 S</div>
+      <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent" />
+      </svg>
+    </div>
+    <div class="flex-col">
+      <div>三次贝塞尔曲线 T</div>
+      <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent" />
+      </svg>
+    </div>
+  </div>

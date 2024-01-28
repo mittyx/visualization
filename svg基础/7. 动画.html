@@ -1,0 +1,77 @@
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .ddd {
+      transform: rotate(-90deg);
+    }
+
+    .progress {
+      stroke-dashoffset: 471px;
+      /* animation: rotate 1500ms linear both; */
+    }
+
+    /* @keyframes rotate {
+      from {
+        stroke-dashoffset: 471px;
+      }
+
+      to {
+        stroke-dashoffset: 0px;
+      }
+    } */
+  </style>
+
+<div class="flex flex-col">
+    <svg width="200" height="200">
+      <circle r="70" cy="75" cx="75" stroke-width="8" stroke="#EAEFF4" stroke-linejoin="round" stroke-linecap="round"
+        fill="none" />
+      <circle transform="rotate(-90,75,75)" r="70" cy="75" cx="75" stroke-width="8" stroke="#1593FF"
+        stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-dasharray="471">
+        <animate attributeName="stroke-dashoffset" values="471;100" dur="2s" fill="freeze" repeatCount="indefinite" />
+      </circle>
+    </svg>
+    <svg width="600" height="250">
+      <g>
+
+        <circle r="70" cy="75" cx="75" stroke-width="8" stroke="#EAEFF4" stroke-linejoin="round" stroke-linecap="round"
+          fill="none" />
+        <circle transform="rotate(-90,75,75)" class="progress" r="70" cy="75" cx="75" stroke-width="8" stroke="#1593FF"
+          stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-dasharray="471">
+          <animate attributeName="stroke-dashoffset" values="471;100" dur="2s" fill="freeze" repeatCount="indefinite" />
+        </circle>
+        <animateMotion dur="5s" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" fill="freeze"
+          repeatCount="indefinite" />
+      </g>
+    </svg>
+    <svg width="600" height="600">
+      <path fill="none" stroke="lightgrey" d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+      <g>
+        <g>
+          <circle r="70" cy="175" cx="175" stroke-width="8" stroke="#EAEFF4" stroke-linejoin="round"
+            stroke-linecap="round" fill="none" />
+          <circle transform="rotate(-90,175,175)" class="progress" r="70" cy="175" cx="175" stroke-width="8"
+            stroke="#1593FF" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-dasharray="471">
+            <animate attributeName="stroke-dashoffset" id="ship" begin="pathId.end" values="471;100" dur="2s"
+              fill="freeze" />
+          </circle>
+        </g>
+
+        <animateMotion dur="5s" id="pathId" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" fill="freeze" />
+        <animateTransform attributeName="transform" type="scale" begin="ship.end" values="1;2;1" dur="2s"
+          repeatCount="indefinite" />
+      </g>
+    </svg>
+  </div>
